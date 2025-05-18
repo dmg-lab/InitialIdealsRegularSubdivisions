@@ -2,6 +2,14 @@
 
 This is the online supplement to the paper "Regular subdivisions, bounds on initial ideals, and categorical limits" (<a href="https://arxiv.org/abs/2411.12819">arXiv 2411.12819</a>) by George Balla, Daniel Corey, Igor Makhlin, and Victoria Schleis.
 
+We use OSCAR version 1.3.1 in Julia. It may be essential to use this version of OSCAR. To ensure this, do the following. First, run `julia --project=.` in the terminal from the root of this project. Next, open `julia` and run the following: 
+
+```
+julia> using Pkg
+julia> Pkg.instantiate()
+```
+
+
 ## Description of the [files / notebooks]
 
 [add brief descriptions of the files]
