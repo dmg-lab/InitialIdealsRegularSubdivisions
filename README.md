@@ -8,16 +8,11 @@ We use OSCAR version 1.3.1 in Julia. It may be essential to use this version of 
 julia> using Pkg
 julia> Pkg.instantiate()
 ```
+All of our code is contained in the notebook 'Computing_I_w_and_Omega.ipynb'. In particular, this notebook contains the details from the following parts of the paper.
 
+**Example 5.4.** We compute $\Omega(I)$ and show that it is a union of 72 of the 102 maximal cones of $\mathrm{Sec} \mathcal{A}(I)$. 
 
-## Description of the [files / notebooks]
+**Example 5.5.** We compute the fan $\Omega(I)$ for the Pluecker ideal $I = I_{3,6}$ and show that it has 30 maximal cones of dimension 10 and 10 more maximal cones of dimension 8. This uses precomputed data stored in the file 'TGr36.mrdi' which was provided to us by Michael Joswig. 
 
-[add brief descriptions of the files]
+**Appendix B.** We create functions that compute the point configuration $\mathcal{A}(I)$ associated to the ideal $I$. 
 
-## References from the text
-
-**Example 5.4.** In [fill in], we compute $\Omega(I)$ and show that it is a union of 72 of the 102 maximal cones of $\mathrm{Sec} \mathcal{A}(I)$. 
-
-**Example 5.5.** In [fill in], we compute the fan $\Omega(I)$ for the Pluecker ideal $I = I_{3,6}$ and show that it has 30 maximal cones of dimension 10 and 10 more maximal cones of dimension 8. 
-
-**Appendix B.** In [fill in], we create functions that compute the point configuration $\mathcal{A}(I)$ associated to the ideal $I$. 
