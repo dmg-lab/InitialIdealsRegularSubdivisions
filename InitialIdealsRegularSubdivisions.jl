@@ -81,12 +81,12 @@ function Omega_fan(I, Delta, Sec, outside = false)
     end
 
     n_cones_Delta, n_rays_Delta = size(cones_Delta)
-    reps = [sum([rays_Delta[j] for j in 1:n_rays_Delta if cones_Delta[i,j]]) 
-                               for i in 1:n_cones_Delta];
+    reps = [sum(cones_Delta[i,:]) == 0 ? Rational[0 for _ in 1 : dim(Sec)] : sum(rays_Delta[j] for j in 1:n_rays_Delta if cones_Delta[i,j])  
+                               for i in 1:n_cones_Delta]
 
     tests = []
     for w in reps
-        w = Vector{Int64}(pm.common.primitive(w))
+        w = lcm(denominator.(w))*w
         init_w_I = initial(I, nu_t, w)
         I_w = ideal_w(I, w, Delta)
         push!(tests, init_w_I == I_w)
@@ -116,12 +116,12 @@ function Omega_star_fan(I, Delta, Sec, outside = false)
     end
 
     n_cones_Delta, n_rays_Delta = size(cones_Delta)
-    reps = [sum([rays_Delta[j] for j in 1:n_rays_Delta if cones_Delta[i,j]]) 
-                               for i in 1:n_cones_Delta];
+    reps = [sum(cones_Delta[i,:]) == 0 ? Rational[0 for _ in 1 : dim(Sec)] : sum(rays_Delta[j] for j in 1:n_rays_Delta if cones_Delta[i,j])  
+                               for i in 1:n_cones_Delta]
 
     tests = []
     for w in reps
-        w = Vector{Int64}(pm.common.primitive(w))
+        w = lcm(denominator.(w))*w
         init_w_I = initial(I, nu_t, -w)
         I_w = ideal_up_w(I, w, Delta)
         push!(tests, init_w_I == I_w)
