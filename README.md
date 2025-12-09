@@ -9,5 +9,5 @@ The notebook `Computing_I_w_and_Omega.ipynb` contains an overview of our main fu
  - the notebook `schubert.ipynb` computes the restricted sets $\Omega_t(I)$ for Schubert varieties in Grassmannians;
  - the notebook `spinor.ipynb` deals with spinor varieties.
 
-The file `gfan_functions.jl` contains an interface for converting data to and from Gfan. The directory contains precomputations of large tropicalizations and secondary fans.
+The file `gfan_functions.jl` contains an interface for converting data to and from Gfan. The directory `precomputed_data` contains precomputations of large tropicalizations and secondary fans.
 
